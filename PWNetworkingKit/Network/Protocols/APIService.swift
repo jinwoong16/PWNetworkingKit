@@ -12,7 +12,7 @@ public protocol APIService {
     var session: URLSession { get }
 }
 
-extension APIService {
+public extension APIService {
     func call(
         url: URL,
         method: HttpMethod = .GET,
@@ -43,22 +43,5 @@ extension APIService {
         headers?.forEach { request.addValue($0.value, forHTTPHeaderField: $0.key) }
         
         return request
-    }
-}
-
-class VITOApiService: APIService {
-    var baseURL: URL
-    var session: URLSession
-    
-    init(baseURL: URL, session: URLSession = .shared) {
-        self.baseURL = baseURL
-        self.session = session
-    }
-    
-    func trasncribe() {
-        /// check access
-        /// if granted
-        /// call api and return data
-        
     }
 }
