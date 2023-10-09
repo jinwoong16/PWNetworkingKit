@@ -9,28 +9,53 @@ import XCTest
 @testable import PWNetworkingKit
 
 final class PWNetworkingKitTests: XCTestCase {
+    var apiService: APIService!
+    var url: URL!
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        let configuration = URLSessionConfiguration.ephemeral
+        configuration.protocolClasses = [MockURLSessionProtocol.self]
+        let urlSession = URLSession(configuration: configuration)
+        
+        url = URL(string: "https://reqres.in/")!
+        apiService = MockApiService(baseURL: url, session: urlSession)
     }
 
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
+        url = nil
+        apiService = nil
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func test_call_withSuccessResponse_shouldReturnData() async throws {
+        guard let path = Bundle(for: PWNetworkingKitTests.self).url(forResource: "static", withExtension: "json"),
+              let data = try? Data(contentsOf: path) else {
+            XCTFail("Failed to get the static file.")
+            return
         }
+        
+        MockURLSessionProtocol.loadingHandler = {
+            let response = HTTPURLResponse(
+                url: self.apiService.baseURL,
+                statusCode: 200,
+                httpVersion: nil,
+                headerFields: nil
+            )
+            
+            return (response!, data)
+        }
+        
+        let response = try await apiService.call(
+            url: url,
+            method: .POST,
+            headers: [
+                .accept(.json),
+                .contentType(.form),
+                .authorization(.basic(""))
+            ]
+        )
+        
+        XCTAssertEqual(response, data)
     }
-
 }
