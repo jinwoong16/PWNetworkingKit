@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		837318212AD28D4D001A5EFB /* MediaType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837318202AD28D4D001A5EFB /* MediaType.swift */; };
+		837318232AD28E49001A5EFB /* AuthorizationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837318222AD28E49001A5EFB /* AuthorizationType.swift */; };
+		837318252AD28E61001A5EFB /* HttpHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837318242AD28E61001A5EFB /* HttpHeader.swift */; };
+		837318272AD28F75001A5EFB /* HttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837318262AD28F75001A5EFB /* HttpError.swift */; };
+		8373182A2AD29021001A5EFB /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837318292AD29021001A5EFB /* APIService.swift */; };
+		8373182C2AD2924F001A5EFB /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8373182B2AD2924F001A5EFB /* HttpMethod.swift */; };
+		8373182F2AD3CDDF001A5EFB /* MockURLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8373182E2AD3CDDF001A5EFB /* MockURLSessionProtocol.swift */; };
+		837318332AD3D0F5001A5EFB /* MockApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837318322AD3D0F5001A5EFB /* MockApiService.swift */; };
+		837318362AD3D281001A5EFB /* static.json in Resources */ = {isa = PBXBuildFile; fileRef = 837318352AD3D281001A5EFB /* static.json */; };
 		83C479022AD27BEB00F7FF97 /* PWNetworkingKit.docc in Sources */ = {isa = PBXBuildFile; fileRef = 83C479012AD27BEB00F7FF97 /* PWNetworkingKit.docc */; };
 		83C479082AD27BEC00F7FF97 /* PWNetworkingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83C478FD2AD27BEB00F7FF97 /* PWNetworkingKit.framework */; };
 		83C4790D2AD27BEC00F7FF97 /* PWNetworkingKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C4790C2AD27BEC00F7FF97 /* PWNetworkingKitTests.swift */; };
@@ -24,6 +33,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		837318202AD28D4D001A5EFB /* MediaType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaType.swift; sourceTree = "<group>"; };
+		837318222AD28E49001A5EFB /* AuthorizationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationType.swift; sourceTree = "<group>"; };
+		837318242AD28E61001A5EFB /* HttpHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpHeader.swift; sourceTree = "<group>"; };
+		837318262AD28F75001A5EFB /* HttpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpError.swift; sourceTree = "<group>"; };
+		837318292AD29021001A5EFB /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		8373182B2AD2924F001A5EFB /* HttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
+		8373182E2AD3CDDF001A5EFB /* MockURLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSessionProtocol.swift; sourceTree = "<group>"; };
+		837318322AD3D0F5001A5EFB /* MockApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockApiService.swift; sourceTree = "<group>"; };
+		837318352AD3D281001A5EFB /* static.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = static.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
 		83C478FD2AD27BEB00F7FF97 /* PWNetworkingKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PWNetworkingKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83C479002AD27BEB00F7FF97 /* PWNetworkingKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PWNetworkingKit.h; sourceTree = "<group>"; };
 		83C479012AD27BEB00F7FF97 /* PWNetworkingKit.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = PWNetworkingKit.docc; sourceTree = "<group>"; };
@@ -50,6 +68,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8373181E2AD28CDD001A5EFB /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				837318282AD29017001A5EFB /* Protocols */,
+				8373181F2AD28D44001A5EFB /* Model */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		8373181F2AD28D44001A5EFB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				837318202AD28D4D001A5EFB /* MediaType.swift */,
+				837318222AD28E49001A5EFB /* AuthorizationType.swift */,
+				837318242AD28E61001A5EFB /* HttpHeader.swift */,
+				837318262AD28F75001A5EFB /* HttpError.swift */,
+				8373182B2AD2924F001A5EFB /* HttpMethod.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		837318282AD29017001A5EFB /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				837318292AD29021001A5EFB /* APIService.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		8373182D2AD3CDC4001A5EFB /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				8373182E2AD3CDDF001A5EFB /* MockURLSessionProtocol.swift */,
+				837318322AD3D0F5001A5EFB /* MockApiService.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		837318302AD3D052001A5EFB /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				837318342AD3D25E001A5EFB /* Static */,
+				8373182D2AD3CDC4001A5EFB /* Mocks */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		837318342AD3D25E001A5EFB /* Static */ = {
+			isa = PBXGroup;
+			children = (
+				837318352AD3D281001A5EFB /* static.json */,
+			);
+			path = Static;
+			sourceTree = "<group>";
+		};
 		83C478F32AD27BEB00F7FF97 = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +144,7 @@
 		83C478FF2AD27BEB00F7FF97 /* PWNetworkingKit */ = {
 			isa = PBXGroup;
 			children = (
+				8373181E2AD28CDD001A5EFB /* Network */,
 				83C479002AD27BEB00F7FF97 /* PWNetworkingKit.h */,
 				83C479012AD27BEB00F7FF97 /* PWNetworkingKit.docc */,
 			);
@@ -80,6 +154,7 @@
 		83C4790B2AD27BEC00F7FF97 /* PWNetworkingKitTests */ = {
 			isa = PBXGroup;
 			children = (
+				837318302AD3D052001A5EFB /* Networking */,
 				83C4790C2AD27BEC00F7FF97 /* PWNetworkingKitTests.swift */,
 			);
 			path = PWNetworkingKitTests;
@@ -184,6 +259,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				837318362AD3D281001A5EFB /* static.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +270,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				837318252AD28E61001A5EFB /* HttpHeader.swift in Sources */,
+				837318212AD28D4D001A5EFB /* MediaType.swift in Sources */,
+				837318272AD28F75001A5EFB /* HttpError.swift in Sources */,
+				8373182C2AD2924F001A5EFB /* HttpMethod.swift in Sources */,
+				837318232AD28E49001A5EFB /* AuthorizationType.swift in Sources */,
+				8373182A2AD29021001A5EFB /* APIService.swift in Sources */,
 				83C479022AD27BEB00F7FF97 /* PWNetworkingKit.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -202,6 +284,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				837318332AD3D0F5001A5EFB /* MockApiService.swift in Sources */,
+				8373182F2AD3CDDF001A5EFB /* MockURLSessionProtocol.swift in Sources */,
 				83C4790D2AD27BEC00F7FF97 /* PWNetworkingKitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,6 +429,7 @@
 		83C479122AD27BEC00F7FF97 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -356,6 +441,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -376,6 +462,7 @@
 		83C479132AD27BEC00F7FF97 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -387,6 +474,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -407,6 +495,7 @@
 		83C479152AD27BEC00F7FF97 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ERT3ZH7BA7;
@@ -423,6 +512,7 @@
 		83C479162AD27BEC00F7FF97 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ERT3ZH7BA7;
