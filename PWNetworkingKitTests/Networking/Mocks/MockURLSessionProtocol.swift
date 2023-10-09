@@ -19,6 +19,10 @@ class MockURLSessionProtocol: URLProtocol {
         return request
     }
     
+    override func stopLoading() {
+        
+    }
+    
     override func startLoading() {
         guard let handler = MockURLSessionProtocol.loadingHandler else {
             XCTFail("Loading handler is not set.")
