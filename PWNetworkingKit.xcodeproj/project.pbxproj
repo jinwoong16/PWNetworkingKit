@@ -7,18 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		831684812AD6B60100407347 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831684802AD6B60100407347 /* Requestable.swift */; };
+		831684832AD6B91700407347 /* Responsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831684822AD6B91700407347 /* Responsable.swift */; };
+		831684872AD6BCF900407347 /* MockURLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831684862AD6BCF900407347 /* MockURLSessionProtocol.swift */; };
+		831684892AD6BD7200407347 /* APIServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831684882AD6BD7200407347 /* APIServiceMock.swift */; };
+		8316848C2AD6BFAB00407347 /* ModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8316848B2AD6BFAB00407347 /* ModelMock.swift */; };
+		831684912AD6C1D900407347 /* EndpointMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831684902AD6C1D900407347 /* EndpointMock.swift */; };
+		831684932AD6C27300407347 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831684922AD6C27300407347 /* Endpoint.swift */; };
+		831684952AD6C2FB00407347 /* PWNetworkingKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831684942AD6C2FB00407347 /* PWNetworkingKitTests.swift */; };
 		837318212AD28D4D001A5EFB /* MediaType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837318202AD28D4D001A5EFB /* MediaType.swift */; };
 		837318232AD28E49001A5EFB /* AuthorizationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837318222AD28E49001A5EFB /* AuthorizationType.swift */; };
 		837318252AD28E61001A5EFB /* HttpHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837318242AD28E61001A5EFB /* HttpHeader.swift */; };
 		837318272AD28F75001A5EFB /* HttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837318262AD28F75001A5EFB /* HttpError.swift */; };
 		8373182A2AD29021001A5EFB /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837318292AD29021001A5EFB /* APIService.swift */; };
 		8373182C2AD2924F001A5EFB /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8373182B2AD2924F001A5EFB /* HttpMethod.swift */; };
-		8373182F2AD3CDDF001A5EFB /* MockURLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8373182E2AD3CDDF001A5EFB /* MockURLSessionProtocol.swift */; };
-		837318332AD3D0F5001A5EFB /* MockApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837318322AD3D0F5001A5EFB /* MockApiService.swift */; };
 		837318362AD3D281001A5EFB /* static.json in Resources */ = {isa = PBXBuildFile; fileRef = 837318352AD3D281001A5EFB /* static.json */; };
 		83C479022AD27BEB00F7FF97 /* PWNetworkingKit.docc in Sources */ = {isa = PBXBuildFile; fileRef = 83C479012AD27BEB00F7FF97 /* PWNetworkingKit.docc */; };
 		83C479082AD27BEC00F7FF97 /* PWNetworkingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83C478FD2AD27BEB00F7FF97 /* PWNetworkingKit.framework */; };
-		83C4790D2AD27BEC00F7FF97 /* PWNetworkingKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C4790C2AD27BEC00F7FF97 /* PWNetworkingKitTests.swift */; };
 		83C4790E2AD27BEC00F7FF97 /* PWNetworkingKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 83C479002AD27BEB00F7FF97 /* PWNetworkingKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -33,20 +38,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		831684802AD6B60100407347 /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
+		831684822AD6B91700407347 /* Responsable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Responsable.swift; sourceTree = "<group>"; };
+		831684862AD6BCF900407347 /* MockURLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSessionProtocol.swift; sourceTree = "<group>"; };
+		831684882AD6BD7200407347 /* APIServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceMock.swift; sourceTree = "<group>"; };
+		8316848B2AD6BFAB00407347 /* ModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelMock.swift; sourceTree = "<group>"; };
+		831684902AD6C1D900407347 /* EndpointMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointMock.swift; sourceTree = "<group>"; };
+		831684922AD6C27300407347 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		831684942AD6C2FB00407347 /* PWNetworkingKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWNetworkingKitTests.swift; sourceTree = "<group>"; };
 		837318202AD28D4D001A5EFB /* MediaType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaType.swift; sourceTree = "<group>"; };
 		837318222AD28E49001A5EFB /* AuthorizationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationType.swift; sourceTree = "<group>"; };
 		837318242AD28E61001A5EFB /* HttpHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpHeader.swift; sourceTree = "<group>"; };
 		837318262AD28F75001A5EFB /* HttpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpError.swift; sourceTree = "<group>"; };
 		837318292AD29021001A5EFB /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		8373182B2AD2924F001A5EFB /* HttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
-		8373182E2AD3CDDF001A5EFB /* MockURLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSessionProtocol.swift; sourceTree = "<group>"; };
-		837318322AD3D0F5001A5EFB /* MockApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockApiService.swift; sourceTree = "<group>"; };
 		837318352AD3D281001A5EFB /* static.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = static.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
 		83C478FD2AD27BEB00F7FF97 /* PWNetworkingKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PWNetworkingKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83C479002AD27BEB00F7FF97 /* PWNetworkingKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PWNetworkingKit.h; sourceTree = "<group>"; };
 		83C479012AD27BEB00F7FF97 /* PWNetworkingKit.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = PWNetworkingKit.docc; sourceTree = "<group>"; };
 		83C479072AD27BEC00F7FF97 /* PWNetworkingKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PWNetworkingKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		83C4790C2AD27BEC00F7FF97 /* PWNetworkingKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWNetworkingKitTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +78,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8316848A2AD6BF9A00407347 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8316848B2AD6BFAB00407347 /* ModelMock.swift */,
+				831684902AD6C1D900407347 /* EndpointMock.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		8373181E2AD28CDD001A5EFB /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +104,7 @@
 				837318242AD28E61001A5EFB /* HttpHeader.swift */,
 				837318262AD28F75001A5EFB /* HttpError.swift */,
 				8373182B2AD2924F001A5EFB /* HttpMethod.swift */,
+				831684922AD6C27300407347 /* Endpoint.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -93,6 +113,8 @@
 			isa = PBXGroup;
 			children = (
 				837318292AD29021001A5EFB /* APIService.swift */,
+				831684802AD6B60100407347 /* Requestable.swift */,
+				831684822AD6B91700407347 /* Responsable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -100,8 +122,9 @@
 		8373182D2AD3CDC4001A5EFB /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
-				8373182E2AD3CDDF001A5EFB /* MockURLSessionProtocol.swift */,
-				837318322AD3D0F5001A5EFB /* MockApiService.swift */,
+				8316848A2AD6BF9A00407347 /* Model */,
+				831684862AD6BCF900407347 /* MockURLSessionProtocol.swift */,
+				831684882AD6BD7200407347 /* APIServiceMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -155,7 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				837318302AD3D052001A5EFB /* Networking */,
-				83C4790C2AD27BEC00F7FF97 /* PWNetworkingKitTests.swift */,
+				831684942AD6C2FB00407347 /* PWNetworkingKitTests.swift */,
 			);
 			path = PWNetworkingKitTests;
 			sourceTree = "<group>";
@@ -225,6 +248,7 @@
 					};
 					83C479062AD27BEC00F7FF97 = {
 						CreatedOnToolsVersion = 15.0;
+						LastSwiftMigration = 1500;
 					};
 				};
 			};
@@ -271,7 +295,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				837318252AD28E61001A5EFB /* HttpHeader.swift in Sources */,
+				831684812AD6B60100407347 /* Requestable.swift in Sources */,
+				831684832AD6B91700407347 /* Responsable.swift in Sources */,
 				837318212AD28D4D001A5EFB /* MediaType.swift in Sources */,
+				831684932AD6C27300407347 /* Endpoint.swift in Sources */,
 				837318272AD28F75001A5EFB /* HttpError.swift in Sources */,
 				8373182C2AD2924F001A5EFB /* HttpMethod.swift in Sources */,
 				837318232AD28E49001A5EFB /* AuthorizationType.swift in Sources */,
@@ -284,9 +311,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				837318332AD3D0F5001A5EFB /* MockApiService.swift in Sources */,
-				8373182F2AD3CDDF001A5EFB /* MockURLSessionProtocol.swift in Sources */,
-				83C4790D2AD27BEC00F7FF97 /* PWNetworkingKitTests.swift in Sources */,
+				831684912AD6C1D900407347 /* EndpointMock.swift in Sources */,
+				831684892AD6BD7200407347 /* APIServiceMock.swift in Sources */,
+				831684952AD6C2FB00407347 /* PWNetworkingKitTests.swift in Sources */,
+				8316848C2AD6BFAB00407347 /* ModelMock.swift in Sources */,
+				831684872AD6BCF900407347 /* MockURLSessionProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +525,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ERT3ZH7BA7;
@@ -504,6 +534,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.polywinterdisign.PWNetworkingKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -513,6 +544,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ERT3ZH7BA7;
