@@ -8,18 +8,14 @@
 import Foundation
 
 public protocol APIService {
-    var baseURL: URL { get }
     var session: URLSession { get }
 }
 
 public extension APIService {
-    func call(
-        url: URL,
-        method: HttpMethod = .GET,
-        headers: [HttpHeader]? = nil,
-        body: Data? = nil
-    ) async throws -> Data {
-        let request = buildRequest(with: url, method: method, headers: headers, body: body)
+    func request<R: Decodable, E: Requestable & Responsable>(
+        with endpoint: E
+    ) async throws -> R where E.Response == R {
+        let request = try endpoint.buildRequest()
         
         let (data, response) = try await session.data(for: request)
         
@@ -28,20 +24,13 @@ public extension APIService {
             throw HttpError.badResponse
         }
         
-        return data
+        let result: R = try decode(data: data)
+        
+        return result
     }
     
-    private func buildRequest(
-        with url: URL,
-        method: HttpMethod,
-        headers: [HttpHeader]? = nil,
-        body: Data? = nil
-    ) -> URLRequest {
-        var request = URLRequest(url: url)
-        request.httpMethod = method.rawValue
-        request.httpBody = body
-        headers?.forEach { request.addValue($0.value, forHTTPHeaderField: $0.key) }
-        
-        return request
+    private func decode<T: Decodable>(data: Data) throws -> T {
+        let decoder = JSONDecoder()
+        return try decoder.decode(T.self, from: data)
     }
 }
