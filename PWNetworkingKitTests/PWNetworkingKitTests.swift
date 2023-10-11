@@ -2,7 +2,7 @@
 //  PWNetworkingKitTests.swift
 //  PWNetworkingKitTests
 //
-//  Created by jinwoong Kim on 10/8/23.
+//  Created by jinwoong Kim on 10/11/23.
 //
 
 import XCTest
@@ -10,25 +10,20 @@ import XCTest
 
 final class PWNetworkingKitTests: XCTestCase {
     var apiService: APIService!
-    var url: URL!
-
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
         let configuration = URLSessionConfiguration.ephemeral
         configuration.protocolClasses = [MockURLSessionProtocol.self]
         let urlSession = URLSession(configuration: configuration)
         
-        url = URL(string: "https://reqres.in/")!
-        apiService = MockApiService(baseURL: url, session: urlSession)
+        apiService = APIServiceMock(session: urlSession)
     }
-
+    
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        url = nil
         apiService = nil
     }
-
-    func test_call_withSuccessResponse_shouldReturnData() async throws {
+    
+    func test_request_withValidRequest_shouldReturnData() async throws {
         guard let path = Bundle(for: PWNetworkingKitTests.self).url(forResource: "static", withExtension: "json"),
               let data = try? Data(contentsOf: path) else {
             XCTFail("Failed to get the static file.")
@@ -37,7 +32,7 @@ final class PWNetworkingKitTests: XCTestCase {
         
         MockURLSessionProtocol.loadingHandler = {
             let response = HTTPURLResponse(
-                url: self.apiService.baseURL,
+                url: URL(string: "https://reqres.in/")!,
                 statusCode: 200,
                 httpVersion: nil,
                 headerFields: nil
@@ -46,16 +41,11 @@ final class PWNetworkingKitTests: XCTestCase {
             return (response!, data)
         }
         
-        let response = try await apiService.call(
-            url: url,
-            method: .POST,
-            headers: [
-                .accept(.json),
-                .contentType(.form),
-                .authorization(.basic(""))
-            ]
+        let result = try await apiService.request(
+            with: endpointMock
         )
         
-        XCTAssertEqual(response, data)
+        XCTAssertEqual(result.id, "769b76e8bcad0a9b5aef27751a705d98")
     }
+    
 }
