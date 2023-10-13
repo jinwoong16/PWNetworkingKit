@@ -15,6 +15,8 @@
 		831684912AD6C1D900407347 /* EndpointMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831684902AD6C1D900407347 /* EndpointMock.swift */; };
 		831684932AD6C27300407347 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831684922AD6C27300407347 /* Endpoint.swift */; };
 		831684952AD6C2FB00407347 /* PWNetworkingKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831684942AD6C2FB00407347 /* PWNetworkingKitTests.swift */; };
+		835EE1D72AD9813E005E2E24 /* PWNetworkingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83C478FD2AD27BEB00F7FF97 /* PWNetworkingKit.framework */; };
+		835EE1D82AD9813E005E2E24 /* PWNetworkingKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 83C478FD2AD27BEB00F7FF97 /* PWNetworkingKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		837318212AD28D4D001A5EFB /* MediaType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837318202AD28D4D001A5EFB /* MediaType.swift */; };
 		837318232AD28E49001A5EFB /* AuthorizationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837318222AD28E49001A5EFB /* AuthorizationType.swift */; };
 		837318252AD28E61001A5EFB /* HttpHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837318242AD28E61001A5EFB /* HttpHeader.swift */; };
@@ -23,12 +25,11 @@
 		8373182C2AD2924F001A5EFB /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8373182B2AD2924F001A5EFB /* HttpMethod.swift */; };
 		837318362AD3D281001A5EFB /* static.json in Resources */ = {isa = PBXBuildFile; fileRef = 837318352AD3D281001A5EFB /* static.json */; };
 		83C479022AD27BEB00F7FF97 /* PWNetworkingKit.docc in Sources */ = {isa = PBXBuildFile; fileRef = 83C479012AD27BEB00F7FF97 /* PWNetworkingKit.docc */; };
-		83C479082AD27BEC00F7FF97 /* PWNetworkingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83C478FD2AD27BEB00F7FF97 /* PWNetworkingKit.framework */; };
 		83C4790E2AD27BEC00F7FF97 /* PWNetworkingKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 83C479002AD27BEB00F7FF97 /* PWNetworkingKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		83C479092AD27BEC00F7FF97 /* PBXContainerItemProxy */ = {
+		835EE1D92AD9813E005E2E24 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 83C478F42AD27BEB00F7FF97 /* Project object */;
 			proxyType = 1;
@@ -36,6 +37,20 @@
 			remoteInfo = PWNetworkingKit;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		835EE1DB2AD9813E005E2E24 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				835EE1D82AD9813E005E2E24 /* PWNetworkingKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		831684802AD6B60100407347 /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
@@ -71,7 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83C479082AD27BEC00F7FF97 /* PWNetworkingKit.framework in Frameworks */,
+				835EE1D72AD9813E005E2E24 /* PWNetworkingKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +100,13 @@
 				831684902AD6C1D900407347 /* EndpointMock.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		835EE1D62AD9813E005E2E24 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		8373181E2AD28CDD001A5EFB /* Network */ = {
@@ -152,6 +174,7 @@
 				83C478FF2AD27BEB00F7FF97 /* PWNetworkingKit */,
 				83C4790B2AD27BEC00F7FF97 /* PWNetworkingKitTests */,
 				83C478FE2AD27BEB00F7FF97 /* Products */,
+				835EE1D62AD9813E005E2E24 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -222,11 +245,12 @@
 				83C479032AD27BEC00F7FF97 /* Sources */,
 				83C479042AD27BEC00F7FF97 /* Frameworks */,
 				83C479052AD27BEC00F7FF97 /* Resources */,
+				835EE1DB2AD9813E005E2E24 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				83C4790A2AD27BEC00F7FF97 /* PBXTargetDependency */,
+				835EE1DA2AD9813E005E2E24 /* PBXTargetDependency */,
 			);
 			name = PWNetworkingKitTests;
 			productName = PWNetworkingKitTests;
@@ -322,10 +346,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		83C4790A2AD27BEC00F7FF97 /* PBXTargetDependency */ = {
+		835EE1DA2AD9813E005E2E24 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 83C478FC2AD27BEB00F7FF97 /* PWNetworkingKit */;
-			targetProxy = 83C479092AD27BEC00F7FF97 /* PBXContainerItemProxy */;
+			targetProxy = 835EE1D92AD9813E005E2E24 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -524,7 +548,6 @@
 		83C479152AD27BEC00F7FF97 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -543,7 +566,6 @@
 		83C479162AD27BEC00F7FF97 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
