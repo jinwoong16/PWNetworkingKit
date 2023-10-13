@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct Endpoint<R: Decodable>: Requestable, Responsable {
-    typealias Response = R
+public struct Endpoint<R: Decodable>: Requestable, Responsable {
+    public typealias Response = R
 
-    var baseURL: String
-    var path: String
-    var method: HttpMethod
-    var headers: [HttpHeader]?
-    var body: Data?
+    public var baseURL: String
+    public var path: String
+    public var method: HttpMethod
+    public var headers: [HttpHeader]?
+    public var body: Data?
 }

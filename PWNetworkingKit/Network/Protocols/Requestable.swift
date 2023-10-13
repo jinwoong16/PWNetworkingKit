@@ -15,7 +15,7 @@ public protocol Requestable {
     var body: Data? { get }
 }
 
-public extension Requestable {
+extension Requestable {
     private func url() throws -> URL {
         guard let url = URL(string: baseURL) else {
             throw URLError(.badURL)
