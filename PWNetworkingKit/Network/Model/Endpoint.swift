@@ -15,4 +15,18 @@ public struct Endpoint<R: Decodable>: Requestable, Responsable {
     public var method: HttpMethod
     public var headers: [HttpHeader]?
     public var body: Data?
+    
+    public init(
+        baseURL: String,
+        path: String,
+        method: HttpMethod,
+        headers: [HttpHeader]? = nil,
+        body: Data? = nil
+    ) {
+        self.baseURL = baseURL
+        self.path = path
+        self.method = method
+        self.headers = headers
+        self.body = body
+    }
 }
