@@ -12,6 +12,7 @@ public enum MediaType {
     case html
     case plainText
     case multipartForm(boundary: String)
+    case urlencoded
     
     var headerValue: String {
         switch self {
@@ -23,6 +24,8 @@ public enum MediaType {
                 return "text/plainText"
             case let .multipartForm(boundary):
                 return "multipart/form-data; \(boundary)"
+            case .urlencoded:
+                return "application/x-www-form-urlencoded"
         }
     }
 }
