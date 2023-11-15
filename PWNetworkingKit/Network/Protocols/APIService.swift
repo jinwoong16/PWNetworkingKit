@@ -18,10 +18,13 @@ public extension APIService {
         let request = try endpoint.buildRequest()
         
         let (data, response) = try await session.data(for: request)
-        
-        guard let httpResponse = response as? HTTPURLResponse,
-              httpResponse.statusCode == 200 else {
+
+        guard let httpResponse = response as? HTTPURLResponse else {
             throw HttpError.badResponse
+        }
+        
+        guard httpResponse.statusCode == 200 else {
+            throw HttpError.errorWith(code: httpResponse.statusCode)
         }
         
         let result: R = try decode(data: data)

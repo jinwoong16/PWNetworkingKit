@@ -11,5 +11,6 @@ public enum HttpError: Error {
     case invalidRequest
     case unexpectedBody
     case badResponse
+    case errorWith(code: Int)
     case invalidUrl
 }
