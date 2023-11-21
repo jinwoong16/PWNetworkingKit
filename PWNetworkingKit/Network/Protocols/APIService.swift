@@ -24,7 +24,7 @@ public extension APIService {
         }
         
         guard httpResponse.statusCode == 200 else {
-            throw HttpError.errorWith(code: httpResponse.statusCode)
+            throw HttpError.errorWith(code: httpResponse.statusCode, data: data)
         }
         
         let result: R = try decode(data: data)
