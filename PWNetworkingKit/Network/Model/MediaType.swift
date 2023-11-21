@@ -23,7 +23,7 @@ public enum MediaType {
             case .plainText:
                 return "text/plainText"
             case let .multipartForm(boundary):
-                return "multipart/form-data; \(boundary)"
+                return "multipart/form-data; boundary=\(boundary)"
             case .urlencoded:
                 return "application/x-www-form-urlencoded"
         }
