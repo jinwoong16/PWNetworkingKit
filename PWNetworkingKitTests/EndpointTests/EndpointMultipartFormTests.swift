@@ -87,4 +87,27 @@ final class EndpointMultipartFormTests: XCTestCase {
         XCTAssertEqual(expectation, result)
     }
 
+    func test_composeBody_withKeyValuePair() throws {
+        endpoint = Endpoint(
+            baseURL: "baseURL",
+            path: "path",
+            method: .POST,
+            headers: [],
+            body: [
+                "id": "password",
+                "id2": "password2"
+            ]
+        )
+        
+        let request = try endpoint.buildRequest()
+        guard let body = request.httpBody else {
+            XCTFail("‼️ http request body is empty.")
+            return
+        }
+        
+        let expectation = "id=password&id2=password2"
+        let result = String(data: body, encoding: .utf8)!
+        
+        XCTAssertEqual(expectation, result)
+    }
 }
