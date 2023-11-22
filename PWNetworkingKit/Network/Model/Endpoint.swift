@@ -45,7 +45,23 @@ public struct Endpoint<R: Decodable>: Requestable, Responsable {
         self.body = composeBody(with: body(), boundary: boundary)
     }
     
-    private func composeBody(with components: [MultipartFormDataComponent], boundary: String) -> Data {
+    public init(
+        baseURL: String,
+        path: String,
+        method: HttpMethod,
+        headers: [HttpHeader],
+        body: [String: String]
+    ) {
+        self.baseURL = baseURL
+        self.path = path
+        self.method = method
+        self.headers = headers
+        self.body = composeBody(with: body)
+    }
+}
+
+private extension Endpoint {
+    func composeBody(with components: [MultipartFormDataComponent], boundary: String) -> Data {
         var formData = Data()
         
         for component in components {
@@ -55,5 +71,12 @@ public struct Endpoint<R: Decodable>: Requestable, Responsable {
         formData.append("--\(boundary)--\r\n".toData())
         
         return formData
+    }
+    
+    func composeBody(with keyValue: [String: String]) -> Data {
+        keyValue
+            .map { "\($0.key)=\($0.value)" }
+            .joined(separator: "&")
+            .toData()
     }
 }
