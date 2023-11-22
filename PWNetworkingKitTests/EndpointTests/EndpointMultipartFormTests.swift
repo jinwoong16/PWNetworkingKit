@@ -42,7 +42,6 @@ final class EndpointMultipartFormTests: XCTestCase {
         ) {
             MultipartFormDataComponent.text(name: "config", value: "{ }")
         }
-        
         let request = try endpoint.buildRequest()
         guard let body = request.httpBody else {
             XCTFail("‼️ http request body is empty.")
