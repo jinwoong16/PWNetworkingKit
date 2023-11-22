@@ -26,6 +26,11 @@
 		837318362AD3D281001A5EFB /* static.json in Resources */ = {isa = PBXBuildFile; fileRef = 837318352AD3D281001A5EFB /* static.json */; };
 		83C479022AD27BEB00F7FF97 /* PWNetworkingKit.docc in Sources */ = {isa = PBXBuildFile; fileRef = 83C479012AD27BEB00F7FF97 /* PWNetworkingKit.docc */; };
 		83C4790E2AD27BEC00F7FF97 /* PWNetworkingKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 83C479002AD27BEB00F7FF97 /* PWNetworkingKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		83E9232B2B0D9DB700C4CF7B /* MultipartFormDataComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E9232A2B0D9DB700C4CF7B /* MultipartFormDataComponent.swift */; };
+		83E9232E2B0D9DEE00C4CF7B /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E9232D2B0D9DEE00C4CF7B /* String+.swift */; };
+		83E923302B0D9E0200C4CF7B /* MultipartFormDataBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E9232F2B0D9E0200C4CF7B /* MultipartFormDataBuilder.swift */; };
+		83E923332B0DA8C700C4CF7B /* EndpointMultipartFormTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E923322B0DA8C700C4CF7B /* EndpointMultipartFormTests.swift */; };
+		83E923362B0DA8E300C4CF7B /* ResponseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E923352B0DA8E300C4CF7B /* ResponseMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +77,11 @@
 		83C479002AD27BEB00F7FF97 /* PWNetworkingKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PWNetworkingKit.h; sourceTree = "<group>"; };
 		83C479012AD27BEB00F7FF97 /* PWNetworkingKit.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = PWNetworkingKit.docc; sourceTree = "<group>"; };
 		83C479072AD27BEC00F7FF97 /* PWNetworkingKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PWNetworkingKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		83E9232A2B0D9DB700C4CF7B /* MultipartFormDataComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipartFormDataComponent.swift; sourceTree = "<group>"; };
+		83E9232D2B0D9DEE00C4CF7B /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		83E9232F2B0D9E0200C4CF7B /* MultipartFormDataBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipartFormDataBuilder.swift; sourceTree = "<group>"; };
+		83E923322B0DA8C700C4CF7B /* EndpointMultipartFormTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointMultipartFormTests.swift; sourceTree = "<group>"; };
+		83E923352B0DA8E300C4CF7B /* ResponseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +122,7 @@
 		8373181E2AD28CDD001A5EFB /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				83E9232C2B0D9DE800C4CF7B /* Utils */,
 				837318282AD29017001A5EFB /* Protocols */,
 				8373181F2AD28D44001A5EFB /* Model */,
 			);
@@ -121,6 +132,7 @@
 		8373181F2AD28D44001A5EFB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				83E923292B0D9DA700C4CF7B /* MultipartFormData */,
 				837318202AD28D4D001A5EFB /* MediaType.swift */,
 				837318222AD28E49001A5EFB /* AuthorizationType.swift */,
 				837318242AD28E61001A5EFB /* HttpHeader.swift */,
@@ -200,10 +212,45 @@
 		83C4790B2AD27BEC00F7FF97 /* PWNetworkingKitTests */ = {
 			isa = PBXGroup;
 			children = (
+				83E923312B0DA8A800C4CF7B /* EndpointTests */,
 				837318302AD3D052001A5EFB /* Networking */,
 				831684942AD6C2FB00407347 /* PWNetworkingKitTests.swift */,
 			);
 			path = PWNetworkingKitTests;
+			sourceTree = "<group>";
+		};
+		83E923292B0D9DA700C4CF7B /* MultipartFormData */ = {
+			isa = PBXGroup;
+			children = (
+				83E9232A2B0D9DB700C4CF7B /* MultipartFormDataComponent.swift */,
+				83E9232F2B0D9E0200C4CF7B /* MultipartFormDataBuilder.swift */,
+			);
+			path = MultipartFormData;
+			sourceTree = "<group>";
+		};
+		83E9232C2B0D9DE800C4CF7B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				83E9232D2B0D9DEE00C4CF7B /* String+.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		83E923312B0DA8A800C4CF7B /* EndpointTests */ = {
+			isa = PBXGroup;
+			children = (
+				83E923342B0DA8D000C4CF7B /* Mocks */,
+				83E923322B0DA8C700C4CF7B /* EndpointMultipartFormTests.swift */,
+			);
+			path = EndpointTests;
+			sourceTree = "<group>";
+		};
+		83E923342B0DA8D000C4CF7B /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				83E923352B0DA8E300C4CF7B /* ResponseMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,6 +365,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83E9232B2B0D9DB700C4CF7B /* MultipartFormDataComponent.swift in Sources */,
+				83E923302B0D9E0200C4CF7B /* MultipartFormDataBuilder.swift in Sources */,
 				837318252AD28E61001A5EFB /* HttpHeader.swift in Sources */,
 				831684812AD6B60100407347 /* Requestable.swift in Sources */,
 				831684832AD6B91700407347 /* Responsable.swift in Sources */,
@@ -327,6 +376,7 @@
 				8373182C2AD2924F001A5EFB /* HttpMethod.swift in Sources */,
 				837318232AD28E49001A5EFB /* AuthorizationType.swift in Sources */,
 				8373182A2AD29021001A5EFB /* APIService.swift in Sources */,
+				83E9232E2B0D9DEE00C4CF7B /* String+.swift in Sources */,
 				83C479022AD27BEB00F7FF97 /* PWNetworkingKit.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,8 +387,10 @@
 			files = (
 				831684912AD6C1D900407347 /* EndpointMock.swift in Sources */,
 				831684892AD6BD7200407347 /* APIServiceMock.swift in Sources */,
+				83E923362B0DA8E300C4CF7B /* ResponseMock.swift in Sources */,
 				831684952AD6C2FB00407347 /* PWNetworkingKitTests.swift in Sources */,
 				8316848C2AD6BFAB00407347 /* ModelMock.swift in Sources */,
+				83E923332B0DA8C700C4CF7B /* EndpointMultipartFormTests.swift in Sources */,
 				831684872AD6BCF900407347 /* MockURLSessionProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
