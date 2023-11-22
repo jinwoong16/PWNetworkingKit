@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+@resultBuilder
+struct MultipartFormDataBuilder {
+    typealias Component = MultipartFormDataComponent
+    
+    static func buildBlock(_ components: Component...) -> [Component] {
+        components
+    }
+}
