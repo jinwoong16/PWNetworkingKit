@@ -8,10 +8,10 @@
 import Foundation
 
 @resultBuilder
-struct MultipartFormDataBuilder {
-    typealias Component = MultipartFormDataComponent
+public struct MultipartFormDataBuilder {
+    public typealias Component = MultipartFormDataComponent
     
-    static func buildBlock(_ components: Component...) -> [Component] {
+    public static func buildBlock(_ components: Component...) -> [Component] {
         components
     }
 }
